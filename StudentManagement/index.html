@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Management System</h1>
+            <p>Manage your student records easily</p>
+        </header>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Total Students</h3>
+                <h2 id="totalStudents">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Average Marks</h3>
+                <h2 id="averageMarks">0</h2>
+            </div>
+        </div>
+
+        <section class="form-section">
+            <h2 id="formTitle">Add New Student</h2>
+
+            <form id="studentForm">
+
+                <input type="number" id="id"
+                    placeholder="Student ID" required>
+
+                <input type="text" id="name"
+                    placeholder="Student Name" required>
+
+                <input type="number" id="age"
+                    placeholder="Age" required>
+
+                <input type="number" id="marks"
+                    placeholder="Marks" min="0" max="100" required>
+
+                <button type="submit" id="submitBtn">
+                    Add Student
+                </button>
+
+                <button type="button" id="cancelBtn" class="cancel">
+                    Cancel
+                </button>
+
+            </form>
+        </section>
+
+        <section class="search-section">
+            <h2>Search Student</h2>
+
+            <input type="number" id="searchId"
+                placeholder="Enter Student ID">
+
+            <button id="searchBtn">Search</button>
+            <button id="showAllBtn">Show All</button>
+        </section>
+
+        <section class="table-section">
+
+            <h2>Student Records</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Marks</th>
+                            <th>Result</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="dist/student.js"></script>
+
+</body>
+</html>
