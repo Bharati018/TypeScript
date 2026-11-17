@@ -161,3 +161,45 @@ console.log(productResponse.data.Id);
 
 //task5
 
+interface Student{
+    name:string;
+    age?:number;
+    marks?:number;
+}
+let student:Readonly<Student>={
+    name:"bahrti",
+    age:22,
+    marks:45
+    
+};
+console.log(student.name);
+//student.name="neha";
+
+interface emplyoyee{
+    name:string;
+    age:number;
+    city:string;
+    marks:number;
+
+}
+let emp:Omit<emplyoyee,"name"| "age">={
+    city:"mumbai",
+    marks:56,
+    //age:34
+
+};
+console.log(emp);
+
+type studentkey=Record<string,string>;
+let s1:studentkey={
+    name:"bharti",
+    age:"23",
+    city:"pune"
+}
+
+type status="save"| "wait"|"pending"|"reject";
+
+type finalStatus=Exclude<status,"wait"|"pending">
+
+let res:finalStatus="reject";
+console.log(res);

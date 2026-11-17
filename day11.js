@@ -88,3 +88,22 @@ console.log(studentResponse.data.name);
 console.log(productResponse.status);
 console.log(productResponse.message);
 console.log(productResponse.data.Id);
+let student = {
+    name: "bahrti",
+    age: 22,
+    marks: 45
+};
+console.log(student.name);
+let emp = {
+    city: "mumbai",
+    marks: 56,
+    //age:34
+};
+console.log(emp);
+let s1 = {
+    name: "bharti",
+    age: "23",
+    city: "pune"
+};
+let res = "reject";
+console.log(res);
