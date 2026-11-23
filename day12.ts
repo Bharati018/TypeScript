@@ -182,3 +182,23 @@ let result:a="number type";
 console.log(result);
  
 
+
+
+
+
+let myInfo={
+name:"bahrti",
+age:22
+}
+
+function introduce(this:{name:string,age:number},city:string,state:string){
+   console.log(this.name);
+   console.log(this.age);
+   console.log(city);
+   console.log(state);
+}
+introduce.call(myInfo,"pune", "maharashtra");
+introduce.apply(myInfo,["nagar","maharashtra"]);
+let res3=introduce.bind(myInfo,"nashik","maharashtra");
+console.log(res3);
+
